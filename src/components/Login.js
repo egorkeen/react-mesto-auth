@@ -16,7 +16,7 @@ function Login(props) {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault(e);
+    e.preventDefault();
 
     props.onSignIn({
       email: email,
@@ -33,8 +33,26 @@ function Login(props) {
       </Header>
       <form onSubmit={handleSubmit} className="start-form" name="login-form">
         <h1 className='start-form__title'>Вход</h1>
-        <input onChange={handleEmailChange} type='email' name='email' value={email} className="start-form__input" placeholder='Email' />
-        <input onChange={handlePasswordChange} type='password' name='password' value={password} className="start-form__input" placeholder='Пароль' />
+        <input
+          type='email' 
+          name='email' 
+          value={email || ''}
+          onChange={handleEmailChange}  
+          className="start-form__input" 
+          placeholder='Email'
+          minLength={4}
+          maxLength={30}
+          required />
+        <input  
+          type='password' 
+          name='password' 
+          value={password || ''}
+          onChange={handlePasswordChange} 
+          className="start-form__input" 
+          placeholder='Пароль'
+          minLength={6}
+          maxLength={12}
+          required />
         <div className='start-form__container'>
           <button type='submit' className="start-form__submit-button">Войти</button>
           <Link to="sign-up" className="start-form__link" />

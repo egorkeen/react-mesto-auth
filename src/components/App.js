@@ -32,7 +32,7 @@ function App() {
   const [isErrorPopupOpen, setErrorPopupOpen] = useState(false);
   const [selectedCard, setSelectedCard] = useState(null);
   const [currentUser, setCurrentUser] = useState({});
-  const [isLoggedIn, setLoggedIn] = useState(null);
+  const [isLoggedIn, setLoggedIn] = useState(false);
   const [email, setEmail] = useState('example@example.com');
   const navigate = useNavigate();
 
@@ -74,7 +74,8 @@ function App() {
           navigate("/", {replace: true});
           setEmail(res.data.email);
           }
-        });
+        })
+        .catch((err) => console.log(err));
     }
   }
 // закрыть попапы

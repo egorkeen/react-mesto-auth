@@ -9,8 +9,7 @@ function PopupWithForm(props) {
         <h3 className="form__title">{props.title}</h3>
         {props.children}
         <button 
-          type="submit" 
-          id="submit-place" 
+          type="submit"  
           className="form__submit-button" 
           aria-label="Сохранить изменения">{props.buttonText}</button>
       </form>
