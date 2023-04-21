@@ -103,6 +103,45 @@ class Api {
       return this.dislike(cardId);
     };
   };
+
+  register(userData) {
+    return fetch('https://auth.nomoreparties.co/signup', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        email: userData.email,
+        password: userData.password
+      })
+    }).then(this._checkStatus);
+  };
+
+  auth(userData) {
+    return fetch(`https://auth.nomoreparties.co/signin`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        email: userData.email,
+        password: userData.password
+      })
+    }).then(this._checkStatus);
+  };
+
+  getContent(token) {
+    return fetch('https://auth.nomoreparties.co/users/me', {
+      method: 'GET',
+      headers: {
+        'Content-Type': "application/json",
+        'Authorization': `Bearer ${token}`
+      }
+    })
+    .then(res => res.json())
+    .then((res) => res)
+    .catch((err) => console.log(err));
+  }
 };
 
 // API
@@ -114,4 +153,4 @@ const api = new Api ({
   }
 });
 
-export default api;
+export {api};

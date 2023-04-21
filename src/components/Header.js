@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from '../images/logo.svg';
 
-function Header() {
+function Header(props) {
   return(
     <header className="header">
     <img
@@ -9,6 +9,7 @@ function Header() {
       className="header__logo"
       alt="Логотип"
     />
+    {props.children}
   </header>
   );
 };

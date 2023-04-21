@@ -7,4 +7,5 @@
   flex-direction: column;
   margin: 0;
   padding: 0;
+  transition: linear .1s;
 }
