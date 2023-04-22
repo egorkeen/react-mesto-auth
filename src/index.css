@@ -1,5 +1,14 @@
 body {
   font-family: 'Inter', Arial, Helvetica, sans-serif;
+  background-color: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 30;
 }
 
 /*normalize.css*/
@@ -7,9 +16,6 @@ body {
 
 /*fonts*/
 @import url(./vendor/Inter/inter.css);
-
-/*page*/
-@import url(./blocks/page/page.css);
 
 /*header*/
 @import url(./blocks/header/header.css);
