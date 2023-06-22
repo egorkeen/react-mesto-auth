@@ -21,7 +21,7 @@
 
 ## Ссылки и прочее 🔗
 
-- Язык: русский
-- Ссылка на репозиторий: https://github.com/egorkeen/mesto-react-auth/
-- Ссылка на GitHub Pages: https://egorkeen.github.io/mesto-react-auth/
+- Язык - русский
+- Ссылка на репозиторий - https://github.com/egorkeen/mesto-react-auth/
+- Ссылка на GitHub Pages - https://egorkeen.github.io/mesto-react-auth/
 - Статус - в разработке ⏳
